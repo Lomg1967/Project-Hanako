@@ -1,5 +1,6 @@
-.\venv
-.\csv
-.\db
-.\__pycache__
-.\txt
+venv/
+__pycache__/
+csv/
+db/
+txt/
+chatlogs/*.log

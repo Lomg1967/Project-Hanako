@@ -1,6 +1,6 @@
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-#from db_creator import retriever
+#from csv_embeder import retriever
 
 model = OllamaLLM(model='artifish/llama3.2-uncensored')
 
@@ -26,3 +26,4 @@ while True:
         "conversation": conversation
     })
     print(response)
+
