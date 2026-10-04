@@ -1,0 +1,6 @@
+pandas
+chroma
+langchain
+langchain-chroma
+langchain-ollama
+faster-whisper
