@@ -4,3 +4,4 @@ langchain
 langchain-chroma
 langchain-ollama
 faster-whisper
+sounddevice soundfile

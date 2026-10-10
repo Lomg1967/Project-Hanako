@@ -5,7 +5,6 @@ from datetime import datetime
 import re
 from pathlib import Path
 import os
-#from ustut 
 
 model = OllamaLLM(model='artifish/llama3.2-uncensored')
 num = 0
@@ -13,11 +12,11 @@ time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 dateNOtime = datetime.now().strftime("%Y-%m-%d")
 timeNOdate = datetime.now().strftime("%H:%M:%S")
 
-with open('sysprompt.md', 'r', encoding='utf-8') as f:
+with open(r'brain\systemprompt.md', 'r', encoding='utf-8') as f:
     sysprompt = f.read()
 
 def memread():
-    with open('memory.txt', 'r', encoding='utf-8') as f:
+    with open(r'brain\memory.txt', 'r', encoding='utf-8') as f:
         f = f.read()
     return f
             
@@ -29,9 +28,9 @@ def make_log_name(mkname):
     return mkname
 #re
 #pathlib
-log_dir = Path('chatlogs')
+log_dir = Path('.\\chatlogs')
 log_dir.mkdir(exist_ok=True)
-chatlogs = None
+crtlogs = None
 
 template = '''
 You are a AI waifu chatbot, 
@@ -47,7 +46,7 @@ while True:
     conversation = input(">>> ")
 
     if conversation == 'q':
-        os.truncate('memory.txt', 0)
+        os.truncate(r'brain\memory.txt', 0)
         break
 
     response = chat.invoke({
@@ -59,17 +58,17 @@ while True:
 
     #logging
     resp4log = f"{time}\n- User: {conversation}\n- AI: {response}\n"
-    if chatlogs is None:
+    if crtlogs is None:
         log_name = make_log_name(timeNOdate)
-        chatlogs = log_dir / f"{log_name}.log"
+        crtlogs = log_dir / f"{log_name}.log"
 
-    with open(chatlogs, 'a', encoding='utf-8') as f:
+    with open(crtlogs, 'a', encoding='utf-8') as f:
         f.write(resp4log)
     #logging
     #memory
     resp4mem =  f"- User: {conversation}\n- AI: {response}\n"
     num = num + 1
-    with open('memory.txt', 'a', encoding='utf-8') as f:
-        f.write(f'{(num)}:\n {resp4mem}')
+    with open(r'brain\memory.txt', 'a', encoding='utf-8') as f:
+        f.write(f'{(num)}:\n{resp4mem}')
     #memory
 
