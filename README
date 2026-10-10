@@ -1,0 +1,77 @@
+# 🌸 Hanako Project
+
+Hanako là một AI companion được phát triển như dự án cá nhân của một sinh viên dấu tên khoa FIT - HANU.
+
+Mục tiêu của dự án không phải là tạo ra một chatbot trả lời câu hỏi, mà là xây dựng một nhân vật AI có khả năng trò chuyện, ghi nhớ, lắng nghe, quan sát và đồng hành cùng người dùng theo thời gian.
+
+---
+
+## Features
+
+- Local LLM Chat
+- Conversation Memory
+- Chat Logging
+- Multi-session Support
+
+### Planned
+
+- Speech-to-Text
+- Text-to-Speech
+- Vision
+- Emotion System
+- Autonomous Interaction
+- Interactable Model
+
+---
+
+## Inspiration
+
+Hanako được lấy cảm hứng từ:
+
+- Văn hóa VTuber và Virtual Companion
+- Project AIRI của cộng đồng open-source AI companion
+- Sanbaka của Zennomi
+- Sự cô đơn của thằng author 
+
+---
+
+## Tech Stack
+
+```text
+helloworld('print')
+```
+
+---
+
+## Roadmap
+
+### MVP
+
+- [x] Local Chat
+- [x] Memory System
+- [x] Chat Logs
+
+### Next
+
+- [ ] Voice Interaction
+- [ ] Vision
+- [ ] Desktop Client
+- [ ] Agent Framework
+- [ ] Emotion & Personality System
+- [ ] Character Model
+
+---
+
+## Author
+
+Nguyễn Hoàng Phi Long
+
+K2025 FIT - Hanoi University (HANU)
+
+> Building an AI companion, one bug at a time.
+
+---
+
+## License
+
+What is license?
