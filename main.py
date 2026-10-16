@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 import os
 
-model = OllamaLLM(model='artifish/llama3.2-uncensored')
+model = OllamaLLM(model='jaahas/qwen3.5-uncensored:9b')
 num = 0
 time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 dateNOtime = datetime.now().strftime("%Y-%m-%d")
